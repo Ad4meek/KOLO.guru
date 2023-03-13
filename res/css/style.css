@@ -1,6 +1,6 @@
 /* Font */
 
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&family=Golos+Text:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&family=Golos+Text:wght@400;500&display=swap");
 
 /* General */
 
@@ -71,33 +71,15 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 75px 0 75px;
-}
-
-input {
-  font-size: 30px;
-  border: none;
-  border-radius: 5px;
-  outline: 0;
-  padding: 0.25rem;
-}
-
-button {
-  font-size: 2rem;
-  margin: 0.75rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-::placeholder {
-  color: #ff000069;
+  padding: 2.5rem;
 }
 
 .logo {
-  background: url("../img/kolo-guru.png") no-repeat;
+  background: url("../img/kolo-guru.png") no-repeat center center;
+  background-size: contain;
   height: 99px;
   width: 322px;
+  margin-right: 2rem;
 }
 
 /* Text */
@@ -160,7 +142,7 @@ button {
 
 .side_panel li {
   padding: 1.25rem;
-  font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
 }
 
 .grid {
@@ -183,7 +165,6 @@ button {
 }
 
 @media only screen and (max-width: 1200px) {
-
   .contact {
     display: none;
   }
@@ -194,6 +175,7 @@ button {
     transition: transform 250ms ease-in-out;
     background-color: white;
     justify-content: center;
+    width: unset;
   }
 
   header {
@@ -220,7 +202,6 @@ button {
     border-radius: 5px;
   }
 
-
   .nav__menu.menuActive .nav__line:first-of-type {
     transform: rotate(45deg);
   }
@@ -236,4 +217,13 @@ button {
   .side_panel.menuActive {
     transform: translateX(0);
   }
+}
+
+@media (max-width: 576px) {
+  .text{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
 }
