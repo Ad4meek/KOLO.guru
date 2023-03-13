@@ -1,5 +1,95 @@
+/* Font */
+
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500&display=swap");
+
+/* General */
+
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Golos Text", sans-serif;
+  letter-spacing: 1px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+h2 {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+p {
+  text-align: justify;
+}
+
+h1 {
+  text-align: center;
+  padding: 2rem;
+}
+
+.flex {
+  display: flex;
+}
+
+/* Header */
+
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../img/background.jpg") no-repeat top;
+  background-size: cover;
+  height: 100vh;
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.3);
+  width: 75%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 50px 0 50px;
+}
+
+input {
+  font-size: 27px;
+}
+
+button {
+  font-size: 25px;
+  padding: 2px;
+}
+
+.logo {
+  background: url("../img/kolo-guru.png") no-repeat;
+  height: 99px;
+  width: 322px;
+}
+
+/* Side Panel */
+
+.side_panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 25%;
 }
