@@ -33,19 +33,26 @@ a {
   color: #000;
 }
 
+h1 {
+  text-align: center;
+  padding: 2rem;
+}
+
 h2 {
   text-align: center;
-  padding: 1.5rem;
+  
+}
+
+h4 {
+  text-align: center;
+  padding: 1.1rem;
 }
 
 p {
   text-align: justify;
 }
 
-h1 {
-  text-align: center;
-  padding: 2rem;
-}
+
 
 .flex {
   display: flex;
@@ -66,22 +73,49 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 50px 0 50px;
+  padding: 50px 75px 0 75px;
 }
 
 input {
-  font-size: 27px;
+  font-size: 30px;
+  border: none;
+  border-radius: 5px;
+  outline: 0;
+  padding: 0.25rem;
 }
 
 button {
-  font-size: 25px;
-  padding: 2px;
+  font-size: 2rem;
+  margin: 0.75rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+::placeholder {
+  color: #ff000069;
 }
 
 .logo {
   background: url("../img/kolo-guru.png") no-repeat;
   height: 99px;
   width: 322px;
+}
+
+/* Text */
+
+.text {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 350px;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.text h1 {
+  color: #e50000;
+  font-size: 3rem;
 }
 
 /* Side Panel */
@@ -92,4 +126,56 @@ button {
   right: 0;
   bottom: 0;
   width: 25%;
+}
+
+.side_panel a {
+  padding: 5px 0;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.side_panel a:before {
+  content: "";
+  background: #e50000;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.side_panel a:hover::before {
+  width: 100%;
+}
+
+.side_panel ul {
+  font-size: 2.5rem;
+  text-align: center;
+  padding-top: 4rem;
+}
+
+.side_panel li {
+  padding: 1.25rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 15% 0 15%;
+}
+
+.contact {
+  padding-top: 9rem;
+  font-size: 1.2rem;
+}
+
+.contact .grid p {
+  text-align: left;
+}
+
+.side_panel .flex {
+  justify-content: space-between;
+  margin: 0 15% 0 15%;
 }
