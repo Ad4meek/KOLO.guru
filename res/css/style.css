@@ -72,10 +72,19 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 2.5rem;
+  
+}
+
+.logo_main {
+  background: url("../img/kolo-guru.png") no-repeat center center;
+  background-size: contain;
+  height: 99px;
+  width: 322px;
+  margin-right: 2rem;
 }
 
 .logo {
-  background: url("../img/kolo-guru.png") no-repeat center center;
+  background: url("../img/kolo-guru2.png") no-repeat center center;
   background-size: contain;
   height: 99px;
   width: 322px;
