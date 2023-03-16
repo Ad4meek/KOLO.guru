@@ -17,7 +17,7 @@ html {
 body {
   font-family: "Golos Text", sans-serif;
   letter-spacing: 1px;
-  overflow: hidden;
+  line-height: 1.4;
 }
 
 img {
@@ -60,11 +60,12 @@ p {
 
 header {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../img/background.jpg") no-repeat top;
+    url("../img/background.jpg") no-repeat center center;
   background-size: cover;
   height: 100vh;
   box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.3);
   width: 75%;
+  position: relative;
 }
 
 nav {
@@ -72,7 +73,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 2.5rem;
-  
 }
 
 .logo_main {
@@ -172,6 +172,50 @@ nav {
   justify-content: space-between;
   margin: 0 15% 0 15%;
 }
+
+/* Footer */
+
+footer {
+  background-color: #000;
+  width: 75%;
+  position: relative;
+}
+
+footer h3 {
+  color: #fff;
+  padding: 1rem 0;
+}
+
+footer i {
+  padding-right: 10px;
+}
+
+footer li {
+  padding: 0.5rem 0;
+}
+
+footer a {
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+footer a:hover {
+  color: #e50000;
+}
+
+.footer-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 auto;
+}
+
+/* Responsiveness */
 
 @media only screen and (max-width: 1200px) {
   .contact {
