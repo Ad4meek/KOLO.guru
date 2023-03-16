@@ -120,6 +120,7 @@ nav {
   flex-direction: column;
   justify-content: space-between;
   padding: 3rem 0 2rem 0;
+  overflow: hidden;
 }
 
 .side_panel a {
@@ -217,7 +218,14 @@ footer a:hover {
 
 /* Responsiveness */
 
+/* 1200px */
+
 @media only screen and (max-width: 1200px) {
+
+  footer {
+    width: 100%;
+  }
+
   .contact {
     display: none;
   }
@@ -228,7 +236,7 @@ footer a:hover {
     transition: transform 250ms ease-in-out;
     background-color: white;
     justify-content: center;
-    width: unset;
+    width: 0;
   }
 
   header {
@@ -269,8 +277,17 @@ footer a:hover {
 
   .side_panel.menuActive {
     transform: translateX(0);
+    width: unset;
   }
 }
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+}
+
+/* 576px */
 
 @media (max-width: 576px) {
   .text {
