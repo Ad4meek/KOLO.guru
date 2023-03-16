@@ -1,6 +1,6 @@
 /* Font */
 
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&family=Golos+Text:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&family=Golos+Text:wght@400;500&family=Sono&display=swap");
 
 /* General */
 
@@ -16,7 +16,6 @@ html {
 
 body {
   font-family: "Golos Text", sans-serif;
-  letter-spacing: 1px;
   line-height: 1.4;
 }
 
@@ -61,7 +60,7 @@ p {
 header {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("../img/background.jpg") no-repeat;
-    background-position: center;
+  background-position: center;
   background-size: cover;
   height: 100vh;
   box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.3);
@@ -102,11 +101,14 @@ nav {
   width: 350px;
   color: #fff;
   font-size: 1.35rem;
+  font-family: "Comfortaa", cursive;
 }
 
 .text h1 {
   color: #e50000;
   font-size: 3rem;
+  font-family: "Golos Text", sans-serif;
+  letter-spacing: 1px;
 }
 
 /* Side Panel */
@@ -117,11 +119,15 @@ nav {
   right: 0;
   bottom: 0;
   width: 25%;
+  overflow: hidden;
+}
+
+.side_panel_in {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 3rem 0 2rem 0;
-  overflow: hidden;
+  height: 100%;
 }
 
 .side_panel a {
@@ -159,20 +165,16 @@ nav {
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 0 15% 0 15%;
+  padding: 0 10%;
 }
 
 .contact {
   font-size: 1.2rem;
+  
 }
 
 .contact .grid p {
   text-align: left;
-}
-
-.side_panel .flex {
-  justify-content: space-between;
-  margin: 0 15% 0 15%;
 }
 
 /* Footer */
@@ -206,16 +208,9 @@ footer a:hover {
 }
 
 .footer-container {
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   padding: 1rem;
-}
-
-.footer-flex {
-  display: flex;
-  justify-content: flex-end;
-  margin: 0 auto;
 }
 
 /* Responsiveness */
@@ -223,7 +218,6 @@ footer a:hover {
 /* 1200px */
 
 @media only screen and (max-width: 1200px) {
-
   header {
     background-position: bottom 0 right 18%;
   }
@@ -238,11 +232,16 @@ footer a:hover {
 
   .side_panel {
     position: absolute;
+    justify-content: center;
+    width: 40%;
+  }
+  .side_panel_in{
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
     background-color: white;
+    width: 100%;
+    height: 100%;
     justify-content: center;
-    width: 0;
   }
 
   header {
@@ -281,15 +280,20 @@ footer a:hover {
     transform: rotate(-45deg);
   }
 
-  .side_panel.menuActive {
+  .side_panel.menuActive .side_panel_in {
     transform: translateX(0);
-    width: unset;
   }
 }
 
 @media (max-width: 768px) {
   .footer-container {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .side_panel{
+    width: 60%;
   }
 }
 
@@ -297,9 +301,15 @@ footer a:hover {
 
 @media (max-width: 576px) {
   .text {
+    line-height: normal;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 1.25rem;
   }
+
+  .side_panel{
+    width: 100%;
+  }
+
 }
