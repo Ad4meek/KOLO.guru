@@ -177,10 +177,30 @@ nav {
   text-align: left;
 }
 
+/* Main Grid */
+
+.main_grid {
+  width: 75%;
+  background-color: #010001;
+  color: #fff;
+}
+
+.main_grid_section {
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+}
+
+.main_grid_image {
+  background: url("../img/bike.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
 /* Footer */
 
 footer {
-  background-color: #000;
+  background-color: #111111;
   width: 75%;
   position: relative;
 }

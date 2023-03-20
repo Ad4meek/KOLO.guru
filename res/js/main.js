@@ -1,7 +1,7 @@
-const navMenu = document.querySelector(".nav__menu");
-const sidePanel = document.querySelector(".side_panel");
+const navMenu = document.getElementById("nav__menu");
+const sidePanel = document.getElementById("side_panel");
 
-navMenu.addEventListener("click", () => {
+navMenu.onclick = () => {
   navMenu.classList.toggle("menuActive");
   sidePanel.classList.toggle("menuActive");
-});
+};
